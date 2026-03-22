@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /livekit.yaml
+    volumes:
+      - ./livekit.yaml:/livekit.yaml
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+    restart: always
