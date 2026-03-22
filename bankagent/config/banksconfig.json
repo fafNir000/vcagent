@@ -1,0 +1,34 @@
+{
+  "banks": [
+    {
+      "name": "unibank",
+      "credits_urls": [
+        "https://www.unibank.am/hy/service/consumer.php"
+      ],
+      "deposits_urls": [
+        "https://www.unibank.am/hy/deposit/"
+      ],
+      "branches_url": ["https://www.unibank.am/hy/branch/"]
+    },
+        {
+      "name": "amiobank",
+      "credits_urls": [
+        "https://amiobank.am/loans"
+      ],
+      "deposits_urls": [
+        "https://amiobank.am/deposits"
+      ],
+      "branches_url": ["https://amiobank.am/offices"]
+    },
+        {
+      "name": "idbank",
+      "credits_urls": [
+        "https://idbank.am/credits/"
+      ],
+      "deposits_urls": [
+        "https://idbank.am/deposits/"
+      ],
+      "branches_url": ["https://idbank.am/information/about/branches-and-atms/?srsltid=AfmBOooK_YIoi59lSK7eYHmGysVM6HxxF9nyjDo6rP2Rm5652ruBALWP"]
+    }
+  ]
+}
