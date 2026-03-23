@@ -12,28 +12,21 @@ Web scraping using Firecrawl
 Project Structure
 bankagent/
 
-back/
-
-rag/
-chroma_db/ (vector database)
-ingest.py (data processing and embeddings)
-scrapers/
-build_db.py (scrapes bank websites)
-
-config/
-
-banksconfig.json (bank URLs configuration)
-
-data/
-
-banks.json (collected data)
-
-livekit/
-
-main.py (voice AI agent)
-docker-compose.yml
-livekit.yaml
-all-MiniLM-L6-v2 (embedding model)
+  back/
+    rag/
+      chroma_db/ (vector database)
+      ingest.py (data processing and embeddings)
+    scrapers/
+      build_db.py (scrapes bank websites)
+  config/
+    banksconfig.json (bank URLs configuration)
+  data/
+    banks.json (collected data)
+  livekit/
+    main.py (voice AI agent)
+    docker-compose.yml
+    livekit.yaml
+    all-MiniLM-L6-v2 (embedding model)
 
 How It Works
 
@@ -46,22 +39,16 @@ Relevant information is retrieved from the database (RAG)
 LLM (LLaMA 3 via Groq) generates an answer using retrieved context
 Answer is converted back to speech (TTS)
 
-LLM Usage
-
-The project uses a Large Language Model (LLaMA 3.3 70B via Groq API).
+=
+The project uses a Large Language Model (LLaMA 3).
 The model does not answer freely — it is restricted to use only the retrieved context from the vector database.
+For using you must install Ollama https://ollama.com/download
+and download llama3 latest version
 
-This ensures:
-
-More accurate answers
-No hallucinations outside the data
-Domain-specific responses (banking only)
 
 Requirements
-
 Python 3.10+
 Docker
-
 Python libraries:
 langchain
 langchain-community
@@ -80,11 +67,6 @@ silero
 
 Installation
 
-Clone the repository
-
-git clone https://github.com/your-username/bankagent.git
-
-cd bankagent
 
 Create virtual environment
 
@@ -95,28 +77,20 @@ Activate environment
 Windows:
 venv\Scripts\activate
 
-Linux / Mac:
-source venv/bin/activate
-
-Install dependencies
-
-pip install -r requirements.txt
+Install necessary dependencies(Requirements)
 
 Setup
-
 Set environment variables:
-
 GROQ_API_KEY=your_key
 DEEPGRAM_API_KEY=your_key
 LIVEKIT_URL=http://127.0.0.1:7880
-
 LIVEKIT_API_KEY=devkey
 LIVEKIT_API_SECRET=devsecret
 
 Run the Project
 
 Start LiveKit
-
+Start Ollama(llama3)
 cd livekit
 docker-compose up
 
