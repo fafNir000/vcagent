@@ -8,7 +8,7 @@ PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 CONFIG_PATH = os.path.join(PROJECT_ROOT, "config", "banksconfig.json")
 DATA_PATH = os.path.join(PROJECT_ROOT, "data", "banks.json")
 
-app = FirecrawlApp(api_key="fc-54f5f4a85c754601b17282e5a06e2043")
+app = FirecrawlApp(api_key="YOUR-API-KEY")
 
 def run_scraper():
     if not os.path.exists(CONFIG_PATH):
